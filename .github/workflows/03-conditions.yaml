@@ -1,0 +1,12 @@
+name: Conditions
+on: [push] # triggers
+jobs:
+  hello:
+    runs-on: ubuntu-latest # Linux OS. We can have windows or MAC
+    steps: # stags
+      - name: step1
+        if: github.ref == 'refs/heads/feature=**'
+        run: echo "Hello World - feature"
+      - name: step2
+        if: github.ref == 'refs/heads/main'
+        run: echo "Hello Github Actions - main"
