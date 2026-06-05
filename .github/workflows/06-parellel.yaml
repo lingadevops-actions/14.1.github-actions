@@ -1,0 +1,24 @@
+name: Parellel
+on: [push] #triggers
+jobs:
+  job-1: # these should be unique.
+    runs-on: ubuntu-latest # Linux OS. We can have windows or MAC.
+    steps: # stages
+      - name: step1
+        run: echo "Hi, I am from job-1"
+  job-2:
+    runs-on: ubuntu-latest # Linux OS. We can have windows or MAC.
+    steps:  # stages
+      - name: step1
+        run: echo "Hi, I am from job-2"
+  job-3:
+    runs-on: ubuntu-latest # Linux OS. We can have windows or MAC.
+    steps:  # stages
+      - name: step1
+        run: echo "Hi, I am from job-3"
+  job-4:
+    runs-on: ubuntu-latest # Linux OS. We can have windows or MAC.
+    steps:  # stages
+      - name: step1
+        run: echo "Hi, I am from job-4"
+        
