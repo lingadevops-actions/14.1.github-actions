@@ -1,0 +1,13 @@
+name: Chekout Code
+on: [push] # triggers
+jobs:
+  build: # these should be unique.
+    runs-on: ubuntu-latest # Linux OS. We can have windows or MAC.
+    steps:
+    # checkout will happen here.
+      - name: checkout
+        uses: actions/checkout@v5
+      - name: display the files
+        run: ls -la
+
+        
