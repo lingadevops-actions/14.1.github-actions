@@ -1,0 +1,10 @@
+name: self-hosted-runner
+on: [push] # triggers
+jobs: # Pipeline. One workflow can have multiple pipelines.
+  hello:
+    runs-on: self-hosted # Linux Os. We can have windows or MAC.
+    steps: # stages
+      - name: step1
+        run: echo "Hello World"
+      - name: step2
+        run: echo "Hello GitHub Actions"
